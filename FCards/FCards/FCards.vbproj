@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C297686-0E1A-4393-B19E-32F1FBEE57E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FCards</RootNamespace>
+    <AssemblyName>FCards</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FCards.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FCards.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Card.vb">
+      <CustomToolNamespace>Gaming</CustomToolNamespace>
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Card.Designer.vb">
+      <DependentUpon>Card.vb</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Card.resx">
+      <DependentUpon>Card.vb</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cards32_1.bmp" />
+    <Content Include="cards32_10.bmp" />
+    <Content Include="cards32_11.bmp" />
+    <Content Include="cards32_12.bmp" />
+    <Content Include="cards32_13.bmp" />
+    <Content Include="cards32_14.bmp" />
+    <Content Include="cards32_15.bmp" />
+    <Content Include="cards32_16.bmp" />
+    <Content Include="cards32_17.bmp" />
+    <Content Include="cards32_18.bmp" />
+    <Content Include="cards32_19.bmp" />
+    <Content Include="cards32_2.bmp" />
+    <Content Include="cards32_20.bmp" />
+    <Content Include="cards32_21.bmp" />
+    <Content Include="cards32_22.bmp" />
+    <Content Include="cards32_23.bmp" />
+    <Content Include="cards32_24.bmp" />
+    <Content Include="cards32_25.bmp" />
+    <Content Include="cards32_26.bmp" />
+    <Content Include="cards32_27.bmp" />
+    <Content Include="cards32_28.bmp" />
+    <Content Include="cards32_29.bmp" />
+    <Content Include="cards32_3.bmp" />
+    <Content Include="cards32_30.bmp" />
+    <Content Include="cards32_31.bmp" />
+    <Content Include="cards32_32.bmp" />
+    <Content Include="cards32_33.bmp" />
+    <Content Include="cards32_34.bmp" />
+    <Content Include="cards32_35.bmp" />
+    <Content Include="cards32_36.bmp" />
+    <Content Include="cards32_37.bmp" />
+    <Content Include="cards32_38.bmp" />
+    <Content Include="cards32_39.bmp" />
+    <Content Include="cards32_4.bmp" />
+    <Content Include="cards32_40.bmp" />
+    <Content Include="cards32_41.bmp" />
+    <Content Include="cards32_42.bmp" />
+    <Content Include="cards32_43.bmp" />
+    <Content Include="cards32_44.bmp" />
+    <Content Include="cards32_45.bmp" />
+    <Content Include="cards32_46.bmp" />
+    <Content Include="cards32_47.bmp" />
+    <Content Include="cards32_48.bmp" />
+    <Content Include="cards32_49.bmp" />
+    <Content Include="cards32_5.bmp" />
+    <Content Include="cards32_50.bmp" />
+    <Content Include="cards32_51.bmp" />
+    <Content Include="cards32_52.bmp" />
+    <Content Include="cards32_53.bmp" />
+    <Content Include="cards32_54.bmp" />
+    <Content Include="cards32_55.bmp" />
+    <Content Include="cards32_56.bmp" />
+    <Content Include="cards32_57.bmp" />
+    <Content Include="cards32_58.bmp" />
+    <Content Include="cards32_59.bmp" />
+    <Content Include="cards32_6.bmp" />
+    <Content Include="cards32_60.bmp" />
+    <Content Include="cards32_61.bmp" />
+    <Content Include="cards32_62.bmp" />
+    <Content Include="cards32_63.bmp" />
+    <Content Include="cards32_64.bmp" />
+    <Content Include="cards32_65.bmp" />
+    <Content Include="cards32_67.bmp" />
+    <Content Include="cards32_68.bmp" />
+    <Content Include="cards32_7.bmp" />
+    <Content Include="cards32_8.bmp" />
+    <Content Include="cards32_9.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
