@@ -22,17 +22,34 @@ Partial Class Card
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.picMain = New System.Windows.Forms.PictureBox()
+        CType(Me.picMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'picMain
+        '
+        Me.picMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.picMain.Image = Global.FCards.My.Resources.Resources.cards32_53
+        Me.picMain.InitialImage = Nothing
+        Me.picMain.Location = New System.Drawing.Point(0, 0)
+        Me.picMain.Margin = New System.Windows.Forms.Padding(0)
+        Me.picMain.Name = "picMain"
+        Me.picMain.Size = New System.Drawing.Size(71, 96)
+        Me.picMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picMain.TabIndex = 0
+        Me.picMain.TabStop = False
         '
         'Card
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.SystemColors.Control
+        Me.Controls.Add(Me.picMain)
         Me.Name = "Card"
-        Me.Size = New System.Drawing.Size(134, 104)
+        Me.Size = New System.Drawing.Size(71, 96)
+        CType(Me.picMain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
+    Friend WithEvents picMain As PictureBox
 End Class
