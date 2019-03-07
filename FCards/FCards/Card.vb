@@ -1,11 +1,15 @@
-﻿Option Explicit On
-Imports System.ComponentModel
-
+﻿Imports System.ComponentModel
+''' <summary>
+''' Class to show (paint) Cards for Card-Games
+''' </summary>
 Public Class Card
 
     Implements INotifyPropertyChanged
 
-    ' Auflistung für Kartenrückseite
+#Region "PublicEnumerations"
+    ''' <summary>
+    ''' Enumeration for Card-Backsite
+    ''' </summary>
     Public Enum ECB As Long
         ecbCrossHatch = 53
         ecbClouds = 54
@@ -25,7 +29,9 @@ Public Class Card
         ecbO = 68
     End Enum
 
-    ' Auflistung für Spielkarten (Vorderseite)
+    ''' <summary>
+    ''' Enumeration for Card-Faces
+    ''' </summary>
     Public Enum ECF As Long
         ecfAce = 1
         ecfTwo = 2
@@ -42,7 +48,9 @@ Public Class Card
         ecfKing = 13
     End Enum
 
-    ' Auflistung für Kartenfarbe
+    ''' <summary>
+    ''' Enumeration for Card-Suits
+    ''' </summary>
     Public Enum ECS As Long
         ecsClubs = 0
         ecsDiamonds = 13
@@ -50,11 +58,14 @@ Public Class Card
         ecsSpades = 39
     End Enum
 
-    ' Auflistung für Kartenseite
+    ''' <summary>
+    ''' Enumeration for Card-Types (Face or Backsite)
+    ''' </summary>
     Public Enum ECT As Long
         ectFaces = 0
         ectBacks = 1
     End Enum
+#End Region
 
     Private lngHeight As Integer ' Höhe UserControl
     Private lngWidth As Integer ' Breite UserControl
@@ -62,6 +73,7 @@ Public Class Card
     Private lngCardFace As ECF = ECF.ecfAce ' Kartenvorderseite
     Private lngCardSuit As ECS = ECS.ecsHearts ' Kartenfarbe
     Private lngCardType As ECT = ECT.ectBacks ' Kartenseite
+
 
     Public Sub New()
 
@@ -88,6 +100,8 @@ Public Class Card
 
     End Sub
 
+
+#Region "PublicEvents"
     Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
     Public Shadows Event Click(sender As Object, e As EventArgs)
@@ -98,11 +112,7 @@ Public Class Card
     'Public Shadows Event MouseDown(sender As Object, e As MouseEventArgs)
     'Public Shadows Event MouseMove(sender As Object, e As MouseEventArgs)
     'Public Shadows Event MouseUp(sender As Object, e As MouseEventArgs)
-
-
-
-
-
+#End Region
 
 
 
@@ -301,6 +311,8 @@ Public Class Card
         RaiseEvent DoubleClick(sender, e)
     End Sub
 
+
+#Region "PublicProperties"
     Public Property CardBack() As ECB
         Get
             CardBack = lngCardBack
@@ -340,6 +352,6 @@ Public Class Card
             NotifyPropertyChanged("CardType")
         End Set
     End Property
-
+#End Region
 
 End Class
