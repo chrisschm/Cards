@@ -1,14 +1,10 @@
-# Cards
+# PlayingCards
 
-Card Gaming Tools
+Windows Forms UserControl to show/paint a playingcard
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Each folder represents one single project.
-
-### Projects
-
-* [FCards](https://github.com/chrisschm/Cards/tree/master/FCards) Windows Forms UserControl "FCards"
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Built With
 
